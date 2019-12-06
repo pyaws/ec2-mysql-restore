@@ -61,7 +61,7 @@ if __name__ == '__main__':
         files.sort()
 
         print(files)
-        sys.exit(0)
+
         for item in files:
             table_name = item[3:-4]
             print('Starting transaction for {}'.format(table_name))
