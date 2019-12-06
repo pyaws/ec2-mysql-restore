@@ -65,8 +65,6 @@ if __name__ == '__main__':
         for item in files:
             table_name = item[3:-4]
             print('Starting transaction for {}'.format(table_name))
-            response = rds_client.execute_statement(secretArn=db_secret_arn, database=db_name, resourceArn=db_arn,
-                                                    sql="SET FOREIGN_KEY_CHECKS = 0;")
 
             response = rds_client.execute_statement(
                 secretArn=db_secret_arn,
@@ -74,9 +72,6 @@ if __name__ == '__main__':
                 resourceArn=db_arn,
                 sql="DROP TABLE IF EXISTS {TABLE_NAME};".format(TABLE_NAME=table_name)
             )
-
-            response = rds_client.execute_statement(secretArn=db_secret_arn, database=db_name, resourceArn=db_arn,
-                                                    sql="SET FOREIGN_KEY_CHECKS = 1;")
 
             file_path = files_path + '/' + item
             file = open(file_path, 'r')
