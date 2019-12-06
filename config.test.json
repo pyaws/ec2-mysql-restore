@@ -1,0 +1,7 @@
+{
+  "REGION": "us-east-1",
+  "AURORA_DB_ARN": "arn:aws:rds:us-east-1:493279981497:cluster:onetdb",
+  "AURORA_DB_SECRET_ARN": "arn:aws:secretsmanager:us-east-1:493279981497:secret:onetdb-secret-mU4rg3",
+  "AURORA_DB_NAME": "onetdb",
+  "DB_SOURCE_URL": "https://www.onetcenter.org/dl_files/database/db_24_0_mysql.zip"
+}
